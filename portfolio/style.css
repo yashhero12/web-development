@@ -1,0 +1,264 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.name:hover {
+  color: #00ffcc;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00ffcc;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 30px;
+  text-align: center;
+  background: linear-gradient(to right, #121212, #1f1f1f);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+  animation: slideDown 1.5s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #aaa;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.animate-slide {
+  animation: slideIn 1s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1.2s ease forwards;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+/* Torchlight Background Reveal */
+.torch-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: url('bg.avif') no-repeat center center;
+  background-size: cover;
+
+  /* Perfect feathered circle */
+  mask-image: radial-gradient(
+    circle 120px at var(--x, 50%) var(--y, 50%),
+    rgba(0, 0, 0, 1) 0px,
+    rgba(0, 0, 0, 0.95) 8px,
+    rgba(0, 0, 0, 0.7) 30px,
+    rgba(0, 0, 0, 0.3) 80px,
+    rgba(0, 0, 0, 0) 120px
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle 120px at var(--x, 50%) var(--y, 50%),
+    rgba(0, 0, 0, 1) 0px,
+    rgba(0, 0, 0, 0.95) 8px,
+    rgba(0, 0, 0, 0.7) 30px,
+    rgba(0, 0, 0, 0.3) 80px,
+    rgba(0, 0, 0, 0) 120px
+  );
+
+  transition: mask-image 0.05s, -webkit-mask-image 0.05s;
+}
+
+/* Existing layout (from previous setup) */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a1a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 100px 30px;
+  text-align: center;
+}

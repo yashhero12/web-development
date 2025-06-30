@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torchlight Background Reveal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="torch-bg"></div>
+
+  <header>
+    <div class="logo"><img src="logo.png" width="100px"></div>
+    <div class="name">Your Name</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I’m a passionate developer building cool things with code!</p>
+  </section>
+
+  <script>
+    const torch = document.querySelector('.torch-bg');
+
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      torch.style.setProperty('--x', `${x}px`);
+      torch.style.setProperty('--y', `${y}px`);
+    });
+  </script>
+
+</body>
+</html>
