@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.boxkapapa{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.box{
+    height: 250px;
+    border: 2px solid black;
+    position: relative;
+}
+.box1{
+    background-color: red;
+    z-index: 3;
+}
+.box2{
+    background-color: blue;
+    z-index: 2;
+    top: -80px;
+    left: 30px;
+}
+.box3{
+    background-color: aqua;
+    z-index: 1;
+    top: -210px;
+    left: 5px;
+}
+.box4{
+    background-color: blueviolet;
+    bottom: 250px;
+    left: 30px;
+}
+
+.box1:hover{
+    z-index: 4;
+    transform: scale(1.05);
+}
+.box2:hover{
+    z-index: 4;
+    transform: scale(1.05);
+}
+.box3:hover{
+    z-index: 4;
+    transform: scale(1.05);
+}
+.box4:hover{
+    z-index: 4;
+    transform: scale(1.05);
+}
