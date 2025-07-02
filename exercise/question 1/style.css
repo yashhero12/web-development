@@ -69,8 +69,17 @@ body {
   border-radius: 999px;
   font-size: 14px;
   transition: 0.3s ease;
+  
 }
 
 .card-btn:hover {
-  background-color: #a6d4ff;
+  /* background-color: #a6d4ff; */
+  background-color: black;
+  color: white;
+  box-shadow: 20px 10px ;
+}
+
+.buttonlink{
+  display: flex;
+  justify-content: center;
 }
